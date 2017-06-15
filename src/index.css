@@ -1,0 +1,13 @@
+.card {
+    float: left;
+    width: 33.333%;
+    padding: .75rem;
+    margin-bottom: 2rem;
+    border: 0;
+    margin: 0.5rem 0 0.5rem 0rem;
+}
+
+.album {
+    margin-top: 75px;
+    background-color: gainsboro;
+}

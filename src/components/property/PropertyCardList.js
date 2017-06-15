@@ -1,12 +1,20 @@
 import React  from 'react';
+import PropertyCard from './PropertyCard';
 
-const PropertyCardList = () => {
+const PropertyCardList = ({properties}) => {
+
+    function renderProperties (property) {
+        return (
+            <PropertyCard key={property.id} property={property}/>
+        )
+    }
+
     return (
-        <ul>
-            <li>Card 1</li>
-            <li>Card 2</li>
-        </ul>
+        <div className="row">
+            {properties.map(renderProperties)}
+        </div>
     );
+
 };
 
 export default PropertyCardList;

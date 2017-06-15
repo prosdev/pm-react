@@ -4,9 +4,10 @@ import registerServiceWorker from './registerServiceWorker';
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ApplicationContainer from './components/containers/ApplicationContainer';
 
 import App from './components/App'
-
+require('./index.css');
 
 const networkInterface = createNetworkInterface({
     uri: 'http://localhost:4000/graphql'
@@ -22,7 +23,7 @@ const Root = () => {
             <Router>
                 <App>
                     <Switch>
-                        <Route path="/properties" component={App} />
+                        <Route path="/" component={ApplicationContainer} />
                     </Switch>
                 </App>
             </Router>

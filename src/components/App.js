@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import PropertyContainer from './property/PropertyContainer';
+import React from 'react';
+import Navigation from '../components/common/Navigation';
 
-class App extends Component {
-  render() {
+const App = (props) => {
     return (
-      <div>
-        <PropertyContainer />
-      </div>
+        <div>
+            <Navigation />
+            {props.children}
+        </div>
     );
-  }
-}
+};
 
 export default App;
